@@ -1,0 +1,343 @@
+/* Overall layout */
+.taskboard-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  /* Main area */
+  .taskboard-main {
+    flex: 3;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    overflow-y: auto;
+    color: #000000;
+  }
+  
+  /* title */
+  .task-title-display {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000000;
+  }
+  
+  /* section */
+  .task-section {
+    margin-bottom: 20px;
+  }
+  
+  .task-section h3 {
+    margin-bottom: 8px;
+    font-size: 20px;
+    color: #000000;
+  }
+  
+  .task-section textarea,
+  .task-section input[type="date"],
+  .task-section input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    box-sizing: border-box;
+    background: #ffffff;
+    color: #000000;
+  }
+  
+  /* Save / Back*/
+  .save-btn, .back-btn {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .save-btn:hover, .back-btn:hover {
+    background-color: #333333;
+  }
+  
+  /* sidebar */
+  .taskboard-sidebar {
+    flex: 1;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    height: fit-content;
+    margin-left: 20px;
+    color: #000000;
+  }
+  
+  .taskboard-sidebar h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #000000;
+  }
+  
+  /* Sidebar button */
+  .sidebar-btn {
+    width: 100%;
+    text-align: left;
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .sidebar-btn:hover {
+    background: #333333;
+  }
+  
+  /* Pop-up window Modal */
+  .modal {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    max-width: 90%;
+    padding: 20px;
+    z-index: 9999;
+    color: #000000;
+  }
+  
+  .modal h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #000000;
+  }
+  
+  .modal input[type="text"],
+  .modal textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #000000;
+  }
+  
+  .modal button {
+    padding: 8px 14px;
+    margin-top: 8px;
+    margin-right: 10px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  /* .modal button:hover {
+    background-color: #333333;
+  }
+
+  .modal div {
+    margin-bottom: 10px;
+  }
+   */
+  /* .modal div button {
+    margin-left: 10px;
+    background: #ef4444;
+    color: white;
+    padding: 4px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  
+  .modal div button:hover {
+    background: #dc2626;
+  } */
+  
+  /*Members*/
+  .members-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+  }
+  
+  .member-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  /* Labels */
+  .labels-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  
+  .label-badge {
+    color: #000000;
+    padding: 6px 10px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  /* Checklist */
+  .checklist-item {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+  }
+  
+  .checklist-item input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  .checklist-item span.completed {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  /* Checklist Progress bar */
+  .progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #cccccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background-color: #000000;
+    transition: width 0.3s;
+  }
+  
+  /* Toast*/
+  .toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    animation: fadeInOut 2s forwards;
+    z-index: 1000;
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(20px); }
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(20px); }
+  }
+  
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 18px;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  /* Manage Members Modal */
+.add-input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.button-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.primary-btn {
+  background: #111827;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.secondary-btn {
+  background: transparent;
+  color: #111827;
+  border: 1px solid #d1d5db;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.member-list {
+  margin-bottom: 16px;
+}
+
+.member-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f3f4f6;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.member-email {
+  font-size: 0.95rem;
+  color: #1f2937;
+}
+
+.remove-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.remove-btn:hover {
+  background: #dc2626;
+}

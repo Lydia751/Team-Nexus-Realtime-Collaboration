@@ -1,0 +1,114 @@
+
+.chat-popup {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 1000;
+  }
+  
+  /* Header of popup */
+  .chat-popup-header {
+    flex: 0 0 auto;
+    padding: 0.75rem 1rem;
+    background-color: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: move;
+  }
+  .chat-popup-header span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111827;
+  }
+  .chat-popup-header .close-btn {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    line-height: 0.3;
+    cursor: pointer;
+    color: #6b7280;
+  }
+  
+  /* Body uses chat-main inner layout */
+  .chat-popup-body {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    overflow: hidden;
+  }
+  
+  /* Message log area */
+  .chat-messages {
+    flex: 1 1 auto;
+    padding: 1rem;
+    overflow-y: auto;
+    background-color: #ffffff;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  .chat-messages .msg {
+    margin-bottom: 0.75rem;
+  }
+  .chat-messages .msg strong {
+    font-weight: 600;
+    color: #111827;
+  }
+  .chat-messages .msg span {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-left: 0.5rem;
+  }
+  .chat-messages .msg p {
+    margin: 0.25rem 0 0;
+    color: #374151;
+  }
+  
+  /* Input area at bottom */
+  .chat-popup-input {
+    flex: 0 0 auto;
+    display: flex;
+    padding: 0.75rem;
+    border-top: 1px solid #e5e7eb;
+    background-color: #f9fafb;
+  }
+  .chat-popup-input input {
+    flex: 1 1 auto;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font-size: 0.9rem;
+    color: #111827;
+    background-color: #ffffff;
+  }
+  .chat-popup-input button {
+    margin-left: 0.75rem;
+    padding: 0.5rem 1rem;
+    background-color: #111827;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  .chat-popup-input button:hover {
+    background-color: #374151;
+  }
+  
+  /* Resize handle in bottom-right corner */
+  .chat-popup-resize {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    right: 2px;
+    bottom: 2px;
+    cursor: se-resize;
+  }
+  

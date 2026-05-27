@@ -1,0 +1,136 @@
+.my-tasks-container {
+    padding: 16px;
+    font-family: sans-serif;
+  }
+
+  .controls {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .controls input {
+    flex: 1;
+    padding: 4px 8px;
+  }
+
+  .controls button {
+    padding: 4px 8px;
+    cursor: pointer;
+  }
+
+  .my-tasks-table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  .my-tasks-table th, .my-tasks-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+
+  .my-tasks-table th {
+    background: #f5f5f5;;
+    cursor: pointer;
+  }
+  
+  /* only make the active sort header look clickable */
+.my-tasks-table th.sortable {
+    cursor: pointer;
+  }
+  
+  /* styling for the dynamic arrow */
+  .my-tasks-table .sort-icon {
+    font-size: 0.9em;
+    color: #1665d8;   
+  }
+  
+  /* styling for the inactive ↕ */
+  .my-tasks-table .sort-icon-inactive {
+    font-size: 0.8em;
+    color: #888;      /* light grey for hint */
+    margin-left: 4px;
+  }
+
+  /* fade entire row and strike‐through task title */
+.my-tasks-table tr.done {
+    color: #aaa;
+  }
+  .my-tasks-table tr.done td:nth-child(2) {
+    text-decoration: line-through;
+  }
+  
+  /* style the green check circle */
+  .done-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 1;
+  }
+
+  /* small inline “Delete” button */
+.delete-btn {
+    margin-left: 8px;
+    background: transparent;
+    border: none;
+    color: #d32f2f;
+    cursor: pointer;
+    font-size: 0.85em;
+  }
+  .delete-btn:hover {
+    text-decoration: underline;
+  }
+
+.task-description-tooltip {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  min-width: 200px;
+  max-width: 300px;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-size: 14px;
+  color: #374151;
+  margin-top: 4px;
+  white-space: normal; 
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+.task-title {
+  cursor: default;
+}
+
+.task-title.completed {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.new-task-badge {
+  display: inline-block;
+  background-color: #ef4444; 
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 9999px; 
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.my-tasks-table tr:hover {
+  background-color: #f9fafb;
+}
