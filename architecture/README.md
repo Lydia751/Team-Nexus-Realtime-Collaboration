@@ -55,14 +55,6 @@ The system supports:
 - notification broadcasting
 - Kanban task management
 
-Uploaded files are stored inside:
-
-```text
-backend/uploads
-```
-
-while metadata is stored in MongoDB.
-
 ---
 
 # 2. Core Database ER Diagram
