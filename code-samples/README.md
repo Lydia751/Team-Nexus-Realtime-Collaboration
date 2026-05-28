@@ -61,6 +61,7 @@ frontend/
 ├── eslint.config.js
 ├── index.html
 ├── package.json
+├── package-lock.json
 ├── tailwind.config.js
 ├── vite.config.js
 └── vitest.config.js
